@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0147963D289D3B6A007E4465 /* ViewControllerNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147963C289D3B6A007E4465 /* ViewControllerNext.swift */; };
+		0147963D289D3B6A007E4465 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147963C289D3B6A007E4465 /* ShowImageViewController.swift */; };
 		015712B82899232700A329E6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015712B72899232700A329E6 /* TableViewCell.swift */; };
 		016241832893A12000854541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016241822893A12000854541 /* AppDelegate.swift */; };
 		016241852893A12000854541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016241842893A12000854541 /* SceneDelegate.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0147963C289D3B6A007E4465 /* ViewControllerNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNext.swift; sourceTree = "<group>"; };
+		0147963C289D3B6A007E4465 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		015712B72899232700A329E6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0162417F2893A12000854541 /* Dog Bread Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Bread Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		016241822893A12000854541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0155AB8928B86747000C9EAC /* Cells */,
-				0147963C289D3B6A007E4465 /* ViewControllerNext.swift */,
+				0147963C289D3B6A007E4465 /* ShowImageViewController.swift */,
 				016241862893A12000854541 /* ViewController.swift */,
 			);
 			path = ViewControllers;
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				016241992893A7A500854541 /* Model.swift in Sources */,
-				0147963D289D3B6A007E4465 /* ViewControllerNext.swift in Sources */,
+				0147963D289D3B6A007E4465 /* ShowImageViewController.swift in Sources */,
 				016241872893A12000854541 /* ViewController.swift in Sources */,
 				0162419C2893BDB500854541 /* DogCell.swift in Sources */,
 				016241832893A12000854541 /* AppDelegate.swift in Sources */,

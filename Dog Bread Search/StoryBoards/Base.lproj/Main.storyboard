@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="45.535714285714285"/>
         </scene>
-        <!--View Controller Next-->
+        <!--Show Image View Controller-->
         <scene sceneID="96r-WX-f7t">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerNext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VKr-Oo-ibz" customClass="ViewControllerNext" customModule="Dog_Bread_Search" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VKr-Oo-ibz" customClass="ShowImageViewController" customModule="Dog_Bread_Search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o3W-is-odS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

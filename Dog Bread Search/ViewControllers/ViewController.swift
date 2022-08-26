@@ -129,6 +129,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DogCell.identifier, for: indexPath) as! DogCell
         cell.configure(imageURL: dogs[indexPath.row])
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = UIScreen.main.scale
         cell.layer.cornerRadius = 25
         cell.backgroundColor = UIColor.black
         return cell
@@ -140,7 +142,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewControllerNext") as! ViewControllerNext
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ShowImageViewController") as! ShowImageViewController
         vc.imageURL = dogs[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
         

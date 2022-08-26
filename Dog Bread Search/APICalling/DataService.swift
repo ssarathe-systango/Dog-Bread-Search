@@ -23,24 +23,26 @@ class DataService {
             return
         }
 
-        URLSession.shared.dataTask(with: validURL) { data, response, error in
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print("HTTP Response Code: \(httpResponse.statusCode)")
-            }
-            
-            guard let validData = data, error == nil else {
-                completion(.failure(error!))
-                return
-            }
-            
-            do {
-                let dogImages = try JSONDecoder().decode(DogImages.self, from: validData)
-                completion(.success(dogImages))
-            } catch let serializationError {
-                completion(.failure(serializationError))
-            }
-        }.resume()
+        DispatchQueue.global(qos: .background).async {
+            URLSession.shared.dataTask(with: validURL) { data, response, error in
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("HTTP Response Code: \(httpResponse.statusCode)")
+                }
+                
+                guard let validData = data, error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                
+                do {
+                    let dogImages = try JSONDecoder().decode(DogImages.self, from: validData)
+                    completion(.success(dogImages))
+                } catch let serializationError {
+                    completion(.failure(serializationError))
+                }
+            }.resume()
+        }
         
     }
     
@@ -54,23 +56,25 @@ class DataService {
             return
         }
 
-        URLSession.shared.dataTask(with: validURL) { data, response, error in
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print("HTTP Response Code: \(httpResponse.statusCode)")
-            }
-            
-            guard let validData = data, error == nil else {
-                completion(.failure(error!))
-                return
-            }
-            
-            do {
-                let dogBreadList = try JSONDecoder().decode(DogBreads.self, from: validData)
-                completion(.success(dogBreadList))
-            } catch let serializationError {
-                completion(.failure(serializationError))
-            }
-        }.resume()
+        DispatchQueue.global(qos: .background).async {
+            URLSession.shared.dataTask(with: validURL) { data, response, error in
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("HTTP Response Code: \(httpResponse.statusCode)")
+                }
+                
+                guard let validData = data, error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                
+                do {
+                    let dogBreadList = try JSONDecoder().decode(DogBreads.self, from: validData)
+                    completion(.success(dogBreadList))
+                } catch let serializationError {
+                    completion(.failure(serializationError))
+                }
+            }.resume()
+        }
     }
 }

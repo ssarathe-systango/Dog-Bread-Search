@@ -1,5 +1,5 @@
 //
-//  ViewControllerNext.swift
+//  ShowImageViewController.swift
 //  Dog Bread Search
 //
 //  Created by macmini01 on 05/08/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerNext: UIViewController {
+class ShowImageViewController: UIViewController {
 
     //MARK: OUTLET
     @IBOutlet weak var imageView: UIImageView!
@@ -28,7 +28,7 @@ class ViewControllerNext: UIViewController {
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             
-            // always update the UI from the main thread
+            // always update the UI in the main thread
             DispatchQueue.main.async() { [weak self] in
                 self?.imageView.image = UIImage(data: data)
             }
